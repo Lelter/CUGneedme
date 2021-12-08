@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外出记录</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F9F9F9;
+        }
+
+        .box {
+            background-color: #fff;
+        }
+
+        .link {
+            display: inline-block;
+            width: 50%;
+            height: 42.6px;
+            color: #52C7CA;
+            font-size: 14px;
+            text-align: center;
+            line-height: 42.6px;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            border-bottom-color: #999;
+            border-color: #52C7CA;
+
+        }
+
+        .li1>a {
+            color: #2f342b;
+            text-decoration: none;
+        }
+
+        .li1 {
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: #BDC0C5;
+        }
+
+        .mid {
+            height: 40px;
+            border-color: #e5e9ea !important;
+            border-bottom-style: solid !important;
+            border-bottom-width: 1px !important;
+            position: relative;
+        }
+
+        .mid>img {
+            position: absolute;
+            height: 25px !important;
+            text-align: left !important;
+
+            margin-top: 8px !important;
+            margin-left: 8px !important;
+
+        }
+
+        .mid>div {
+            position: relative;
+            word-break: break-word;
+            text-align: left !important;
+            line-height: 40px !important;
+
+            font-size: 16px !important;
+            color: #555555 !important;
+            margin-left: 40px !important;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+            margin-left: 8px;
+            vertical-align: bottom;
+        }
+
+        .iconfont {
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        .iconfont>div {
+            margin-bottom: 8px !important;
+            margin-top: 8px !important;
+        }
+
+        .point {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #4fc033;
+            margin: 2px;
+            margin-left: 12px;
+            border-radius: 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span class="link li1"><a href="cug.html">外出申请</a></span><span class="link">外出记录</span>
+        <div class="mid">
+            <img src="picture/rl.png" alt="">
+            <div class="date"></div>
+        </div>
+        <div class="iconfont">
+            <div>
+                <img src="picture/time.png" alt="" class="icon">
+                <span style="color: #999;">预计外出时间：</span>
+                <span style="color: #555;">2021-<span class="dateMonth"></span>-<span class="nowDate"></span>
+                    05:00</span>
+            </div>
+
+            <div>
+                <img src="picture/time.png" alt="" class="icon">
+                <span style="color: #999;">预计返回时间：</span>
+                <span style="color: #555;">2021-<span class="dateMonth"></span>-<span class="nextDate"></span>
+                    00:00</span>
+            </div>
+            <div>
+                <img src="picture/prompt.png" alt="" class="icon">
+                <span style="color: #92969c;">离校事由：</span>
+                <span style="color: #1e2329;">临时外出</span>
+            </div>
+            <div>
+                <img src="picture/qz.png" alt="" class="icon">
+                <span style="color: #999;">目的地：</span>
+                <span style="color: #555;margin-left: 36px;">湖北武汉</span>
+            </div>
+            <div>
+                <span class="point"></span>
+                <span style="color: #4fc033;font-size: 16px;">已通过</span>
+            </div>
+            <script>
+                var nowDate = document.querySelector('.nowDate');
+                var nextDate = document.querySelector('.nextDate');
+                var date1 = document.querySelector('.date');
+                var dateMonth = document.querySelectorAll('.dateMonth');
+                var date = new Date();
+                date1.innerHTML = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+
+                function fleshDate() {
+                    var date = new Date();
+                    nowDate.innerHTML = date.getDate();
+                    nextDate.innerHTML = date.getDate() + 1;
+                    dateMonth[0].innerHTML = date.getMonth() + 1;
+                    dateMonth[1].innerHTML = date.getMonth() + 1;
+                }
+                fleshDate();
+            </script>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
