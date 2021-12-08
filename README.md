@@ -18,6 +18,6 @@
 
 具体使用参考导航栏外出紫码申请,或者微信关注公众号Lelter，或者网址：
 
-外出申请 (lelter.xyz)
+lelter.xyz/cug.html
 
 仅供学习参考，低调使用
